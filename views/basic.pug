@@ -1,0 +1,42 @@
+﻿doctype html
+html
+  head
+    title Яндекс Дом
+    meta(charset='utf-8')
+    meta(name='robots', content='noindex')
+    link(href='/public/css/style.css', rel='stylesheet')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    block header
+  body.main-panel
+    header.navbar.navbar-expand.navbar-absolute.fixed-top
+      .container
+        .navbar-brand.logo
+          img(src='/public/img/logo.svg')
+        nav.collapse.navbar-collapse
+          ul.navbar-nav
+            li.nav-item
+              a.nav-link(href='#') Сводка
+            li.nav-item
+              a.nav-link(href='#') Устройства
+            li.nav-item
+              a.nav-link(href='#') Сценарии
+            li.nav-item
+              a.nav-link(href='broadcast') Видеотрансляция
+        .navbar-toggler.navbar-toggler-icon
+  hr
+  main.content.container
+    block content
+  footer
+      ul
+        li
+          a(href='#') Помощь
+        li
+          a(href='#') Обратная связь
+        li
+          a(href='#') Разработчикам
+        li
+          a(href='#') Условия использования
+        li
+          a(href='files/license.pdf') Авторские права
+      p.copy © 2001 - 2018 ООО "Яндекс"
+  block scripts

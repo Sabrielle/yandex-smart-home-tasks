@@ -1,0 +1,21 @@
+{
+  "name": "SHRI-Task",
+  "version": "0.1.1",
+  "description": "Домашнее задание ШРИ",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "dev": "./node_modules/.bin/nodemon --config ./conf/nodemon.json",
+    "pro": "./node_modules/.bin/forever -a --minUptime 1000 --spinSleepTime 3000 start main.js",
+    "prostop": "./node_modules/.bin/forever stop main.js"
+  },
+  "author": "Anna",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "1.16.x",
+    "express": "4.14.x",
+    "nconf": "0.8.x",
+    "nodemon": "1.11.x",
+    "pug": "^2.0.0-beta11"
+  }
+}

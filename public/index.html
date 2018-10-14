@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Яндекс Дом</title>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<link href="css/style.css" rel="stylesheet">
+<script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="main-panel">
+
+<header class="navbar navbar-expand navbar-absolute fixed-top">
+	<div class="container">
+		<div class="navbar-brand logo"><img src="img/logo.svg"/></div>
+		<nav class="collapse navbar-collapse">
+			<ul class="navbar-nav">
+				<li class="nav-item"><a class="nav-link" href="#">Сводка</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">Устройства</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">Сценарии</a></li>
+			</ul>
+		</nav>
+		<div class="navbar-toggler navbar-toggler-icon"></div>
+	</div>
+</header>
+
+<hr/>
+
+<main class="content container">
+	<div class="content-header">
+		<h1>Лента событий</h1>
+	</div>
+	<div class="content-grid">
+		<div class="grid-item size-l">
+			<div class="close">
+				<img src="img/cross.svg"/>
+			</div>
+			<div class="grid-item-header">
+				<img class="grid-item-icon" src="img/stats.svg"/>
+				<h4 class="grid-item-title">Еженедельный отчет по расходам ресурсов</h4>
+			</div>
+			<div class="grid-item-subheader">
+				<p>Сенсоры потребления</p>
+				<p>19:00, Сегодня</p>
+			</div>
+			<div class="grid-item-content">
+				<p>Так держать! За последнюю неделю вы потратили на 10% меньше ресурсов, чем неделей ранее.</p>
+				<img class="img-fluid" src="img/Richdata.svg"/>
+			</div>
+			<div class="details">
+				<img src="img/Next.svg"/>
+			</div>
+		</div>
+		<div class="grid-item size-s">
+			<div class="close">
+				<img src="img/cross.svg"/>
+			</div>
+			<div class="grid-item-header">
+				<img class="grid-item-icon" src="img/key.svg"/>
+				<h4 class="grid-item-title">Дверь открыта</h4>
+			</div>
+			<div class="grid-item-subheader">
+				<p>Сенсор входной двери</p>
+				<p>18:50, Сегодня</p>
+			</div>
+			<div class="details">
+				<img src="img/Next.svg"/>
+			</div>
+		</div>
+		<div class="grid-item size-s">
+			<div class="close">
+				<img src="img/cross.svg"/>
+			</div>
+			<div class="grid-item-header">
+				<img class="grid-item-icon" src="img/robot-cleaner.svg"/>
+				<h4 class="grid-item-title">Уборка закончена</h4>
+			</div>
+			<div class="grid-item-subheader">
+				<p>Пылесос</p>
+				<p>18:45, Сегодня</p>
+			</div>
+			<div class="details">
+				<img src="img/Next.svg"/>
+			</div>
+		</div>
+		<div class="grid-item size-s">
+			<div class="close">
+				<img src="img/cross.svg"/>
+			</div>
+			<div class="grid-item-header">
+				<img class="grid-item-icon" src="img/router.svg"/>
+				<h4 class="grid-item-title">Новый пользователь</h4>
+			</div>
+			<div class="grid-item-subheader">
+				<p>Роутер</p>
+				<p>18:45, Сегодня</p>
+			</div>
+			<div class="details">
+				<img src="img/Next.svg"/>
+			</div>
+		</div>
+		<div class="grid-item size-m">
+			<div class="close">
+				<img src="img/cross.svg"/>
+			</div>
+			<div class="grid-item-header">
+				<img class="grid-item-icon" src="img/thermal.svg"/>
+				<h4 class="grid-item-title">Изменен климатический режим</h4>
+			</div>
+			<div class="grid-item-subheader">
+				<p>Сенсор микроклимата</p>
+				<p>18:30, Сегодня</p>
+			</div>
+			<div class="grid-item-content">
+				<p>Установлен климатический режим «Фиджи»</p>
+				<div class="grid-item-additional temperature">
+					<p>Температура: <b>+24 С</b></p>
+					<p>Влажность: <b>80%</b></p>
+				</div>
+			</div>
+			<div class="details">
+				<img src="img/Next.svg"/>
+			</div>
+		</div>
+		<div class="grid-item size-m item-critical">
+			<div class="close">
+				<img src="img/cross-white.svg"/>
+			</div>
+			<div class="grid-item-header">
+				<img class="grid-item-icon" src="img/ac-white.svg"/>
+				<h4 class="grid-item-title">Невозможно включить кондиционер</h4>
+			</div>
+			<div class="grid-item-subheader">
+				<p>Кондиционер</p>
+				<p>18:22, Сегодня</p>
+			</div>
+			<div class="grid-item-content">
+				<p>В комнате открыто окно, закройте его и повторите попытку</p>
+			</div>
+			<div class="details">
+				<img src="img/Next.svg"/>
+			</div>
+		</div>
+		<div class="grid-item size-m">
+			<div class="close">
+				<img src="img/cross.svg"/>
+			</div>
+			<div class="grid-item-header">
+				<img class="grid-item-icon" src="img/music.svg"/>
+				<h4 class="grid-item-title">Музыка включена</h4>
+			</div>
+			<div class="grid-item-subheader">
+				<p>Яндекс.Станция</p>
+				<p>18:16, Сегодня</p>
+			</div>
+			<div class="grid-item-content">
+				<p>Сейчас проигрывается:</p>
+				<div class="grid-item-additional">
+					<img src="img/album-cover.png"/>
+					<div class="track-info">
+						<p class="track-title">Florence & The Machine - Big God</p>
+						<input class="track" type="range" min="0" max="270" value="40">
+						<span class="track-duration">4:31</span>
+					</div>
+				</div>
+				<div class="grid-item-additional music">
+					<img src="img/Prev.svg"/>
+					<img src="img/Prev.svg"/>
+					<input class="volume" type="range" min="0" max="100" value="80">
+					<p class="track-volume">80%</p>
+				</div>
+			</div>
+			<div class="details">
+				<img src="img/Next.svg"/>
+			</div>
+		</div>
+		<div class="grid-item size-m">
+			<div class="close">
+				<img src="img/cross.svg"/>
+			</div>
+			<div class="grid-item-header">
+				<img class="grid-item-icon" src="img/fridge.svg"/>
+				<h4 class="grid-item-title">Заканчивается молоко</h4>
+			</div>
+			<div class="grid-item-subheader">
+				<p>Холодильник</p>
+				<p>17:23, Сегодня</p>
+			</div>
+			<div class="grid-item-content">
+				<p>Кажется, в холодильнике заканчивается молоко. Вы хотите добавить его в список покупок?</p>
+				<div class="grid-item-additional buttons">
+					<button class="btn btn-default btn-large active">Да</button>
+					<button class="btn btn-default btn-large">Нет</button>
+				</div>
+			</div>
+			<div class="details">
+				<img src="img/Next.svg"/>
+			</div>
+		</div>
+		<div class="grid-item size-s">
+			<div class="close">
+				<img src="img/cross.svg"/>
+			</div>
+			<div class="grid-item-header">
+				<img class="grid-item-icon" src="img/battery.svg"/>
+				<h4 class="grid-item-title">Зарядка завершена</h4>
+			</div>
+			<div class="grid-item-subheader">
+				<p>Оконный сенсор</p>
+				<p>16:22, Сегодня</p>
+			</div>
+			<div class="grid-item-content">
+				<p>Ура! Устройство «Оконный сенсор» снова в строю!</p>
+			</div>
+			<div class="details">
+				<img src="img/Next.svg"/>
+			</div>
+		</div>
+		<div class="grid-item size-l item-critical">
+			<div class="item-header">
+				<div class="close">
+					<img src="img/cross-white.svg"/>
+				</div>
+				<div class="grid-item-header">
+					<img class="grid-item-icon" src="img/cam-white.svg"/>
+					<h4 class="grid-item-title">Пылесос застрял</h4>
+				</div>
+				<div class="grid-item-subheader">
+					<p>Сенсор движения</p>
+					<p>16:17, Сегодня</p>
+				</div>
+			</div>
+			<div class="item-content">
+				<div class="grid-item-content">
+					<p>Робопылесос не смог сменить свое местоположение в течение последних 3 минут. Похоже, ему нужна помощь.</p>
+					<div class="accessible">
+						<img id="image" touch-action="none" draggable="false" src="img/Richdata Graph Alternative.png"/>
+					</div>
+					<div class="grid-item-additional controls">
+						<p id="zoom">Приближение: 100%</p>
+						<p id="brightness">Яркость: 100%</p>
+					</div>
+				</div>
+				<div class="details">
+					<img src="img/Next.svg"/>
+				</div>
+			</div>
+		</div>
+		<div class="grid-item size-s">
+			<div class="close">
+				<img src="img/cross.svg"/>
+			</div>
+			<div class="grid-item-header">
+				<img class="grid-item-icon" src="img/kettle.svg"/>
+				<h4 class="grid-item-title">Вода вскипела</h4>
+			</div>
+			<div class="grid-item-subheader">
+				<p>Чайник</p>
+				<p>16:20, Сегодня</p>
+			</div>
+			<div class="details">
+				<img src="img/Next.svg"/>
+			</div>
+		</div>
+	</div>
+</main>
+
+<footer>
+	<ul>
+		<li><a href="#">Помощь</a></li>
+		<li><a href="#">Обратная связь</a></li>
+		<li><a href="#">Разработчикам</a></li>
+		<li><a href="#">Условия использования</a></li>
+		<li><a href="files/license.pdf">Авторские права</a></li>
+	</ul>
+	<p class="copy">&copy 2001 - 2018 ООО "Яндекс"</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
