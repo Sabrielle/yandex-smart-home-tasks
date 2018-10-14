@@ -3,7 +3,6 @@
 var conf = require('./conf');
 var fs = require("fs");
 var bodyParser = require('body-parser');
-var favicon = require('serve-favicon');
 var express = require('express');
 var router = require('./controllers/router');
 var app = express();
