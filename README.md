@@ -19,13 +19,13 @@ npm run dev
 
 Код обработчиков находится в `controllers\apiController.js`
 
-Принимает как GET, так и POST запросы на `api/events`
+Принимает как GET, так и POST запросы на `api/events`. Массив с типами, по которым происходит фильрация, вынесен в `conf.json`
 
 Реализована пагинация с указанием текущей страницы `page` и количества записей на страницу `limit`
 
  ###### Примеры линков
  
-- [http://localhost:8000/status](http://localhost:8000/status) - время, прошедшее с запуска сервера
+- [http://localhost:8000/status](http://localhost:8000/status)
 - [http://localhost:8000/api/events](http://localhost:8000/api/events)
 - [http://localhost:8000/api/events?type=info:aaa](http://localhost:8000/api/events?type=info:aaa) - 400 incorrect type
 - [http://localhost:8000/api/events?type=info&page=1&limit=bbb](http://localhost:8000/api/events?type=info&page=1&limit=bbb) - 400 incorrect number of page or limit
