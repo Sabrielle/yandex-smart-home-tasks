@@ -12,75 +12,46 @@ module.exports = {
 	},
 
 	eventsGetRequest: (req, res) => {
-
-		if(!Object.keys(req.query).length) 
-			return fs.readFile('./data/events.json', (err, content) => {
-				if (err) throw err;
-				return res.send(JSON.parse(content).events);
-			});
-
-		var type = (typeof(req.query.type) !== 'undefined') ? req.query.type : '';
-		var limit = (typeof(req.query.limit) !== 'undefined') ? req.query.limit : '';
-		var currentPage = (typeof(req.query.page) !== 'undefined') ? req.query.page : '';
-
-		fs.readFile('./data/events.json', (err, content) => {
-
-			if (err) throw err;
-			if (type.length && !validateType(type)) 
-				return res.status(400).send('incorrect type');
-
-			var filtered = (type !== '') ? parseParams(type, content) : JSON.parse(content).events;
-			
-			if(limit.length && currentPage.length) {
-				if(limit <= 0 || currentPage <= 0 || isNaN(limit) || isNaN(currentPage)) 
-					return res.status(400).send('incorrect number of page or limit');
-				var total = filtered.length;
-				var totalPages = Math.ceil(total/limit);
-				if(currentPage > totalPages) 
-					return res.status(400).send('page number is too big');
-				filtered = filtered.slice((currentPage - 1)*limit, currentPage*limit);
-			}
-
-			return res.send(filtered);
-		})
-
+		handleRequest(req, res, req.query);
 	},
 
 	eventsPostRequest: (req, res) => {
-		
-		if(!Object.keys(req.body).length) 
-			return fs.readFile('./data/events.json', (err, content) => {
-				if (err) throw err;
-				return res.send(JSON.parse(content).events);
-			});
-
-		var type = (typeof(req.body.type) !== 'undefined') ? req.body.type : '';
-		var limit = (typeof(req.body.limit) !== 'undefined') ? req.body.limit : '';
-		var currentPage = (typeof(req.body.page) !== 'undefined') ? req.body.page : '';
-
-		fs.readFile('./data/events.json', (err, content) => {
-
-			if (err) throw err;
-			if (type.length && !validateType(type))
-				return res.status(400).send('incorrect type');
-
-			var filtered = (type !== '') ? parseParams(type, content) : JSON.parse(content).events;
-			
-			if(limit.length && currentPage.length) {
-				if(limit <= 0 || currentPage <= 0 || isNaN(limit) || isNaN(currentPage))
-					return res.status(400).send('incorrect number of page or limit');
-				var total = filtered.length;
-				var totalPages = Math.ceil(total/limit);
-				if(currentPage > totalPages) 
-					return res.status(400).send('page number is too big');
-				filtered = filtered.slice((currentPage - 1)*limit, currentPage*limit);
-			}
-
-			return res.send(filtered);
-		})
-
+		handleRequest(req, res, req.body);
 	}
 
+}
+
+function handleRequest(req, res, paramSource) {
+	if(!Object.keys(paramSource).length) 
+		return fs.readFile('./data/events.json', (err, content) => {
+			if (err) throw err;
+			return res.send(JSON.parse(content).events);
+		});
+
+	var type = (typeof(paramSource.type) !== 'undefined') ? paramSource.type : '';
+	var limit = (typeof(paramSource.limit) !== 'undefined') ? paramSource.limit : '';
+	var currentPage = (typeof(paramSource.page) !== 'undefined') ? paramSource.page : '';
+
+	fs.readFile('./data/events.json', (err, content) => {
+
+		if (err) throw err;
+		if (type.length && !validateType(type))
+			return res.status(400).send('incorrect type');
+
+		var filtered = (type !== '') ? parseParams(type, content) : JSON.parse(content).events;
+		
+		if(limit.length && currentPage.length) {
+			if(limit <= 0 || currentPage <= 0 || isNaN(limit) || isNaN(currentPage))
+				return res.status(400).send('incorrect number of page or limit');
+			var total = filtered.length;
+			var totalPages = Math.ceil(total/limit);
+			if(currentPage > totalPages) 
+				return res.status(400).send('page number is too big');
+			filtered = filtered.slice((currentPage - 1)*limit, currentPage*limit);
+		}
+
+		return res.send(filtered);
+	})
 }
 
 function validateType(param) {
