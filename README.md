@@ -5,6 +5,10 @@ npm run dev
 ```
 Доступен по адресу  [localhost:8000](localhost:8000)
 
+## Для задания по типизации миграция на TypeScript api/events и /status
+
+`npm run type` 
+
 ## Задание 3 "Мультимедиа"
 
 Страница с видео [http://localhost:8000/broadcast](http://localhost:8000/broadcast)
@@ -19,13 +23,13 @@ npm run dev
 
 Код обработчиков находится в `controllers\apiController.js`
 
-Принимает как GET, так и POST запросы на `api/events`. Массив с типами, по которым происходит фильрация, вынесен в `conf.json`
+Принимает как GET, так и POST запросы на `api/events`
 
 Реализована пагинация с указанием текущей страницы `page` и количества записей на страницу `limit`
 
  ###### Примеры линков
  
-- [http://localhost:8000/status](http://localhost:8000/status)
+- [http://localhost:8000/status](http://localhost:8000/status) - время, прошедшее с запуска сервера
 - [http://localhost:8000/api/events](http://localhost:8000/api/events)
 - [http://localhost:8000/api/events?type=info:aaa](http://localhost:8000/api/events?type=info:aaa) - 400 incorrect type
 - [http://localhost:8000/api/events?type=info&page=1&limit=bbb](http://localhost:8000/api/events?type=info&page=1&limit=bbb) - 400 incorrect number of page or limit
