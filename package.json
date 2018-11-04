@@ -1,14 +1,13 @@
 {
-  "name": "SHRI-Task",
-  "version": "0.1.1",
+  "name": "shri-smart-home-task",
+  "version": "1.1.0",
   "description": "Домашнее задание ШРИ",
   "main": "main.js",
   "scripts": {
     "start": "node main.js",
+    "build": "tsc",
     "type": "node ./build/main.js",
-    "dev": "./node_modules/.bin/nodemon --config ./conf/nodemon.json",
-    "pro": "./node_modules/.bin/forever -a --minUptime 1000 --spinSleepTime 3000 start main.js",
-    "prostop": "./node_modules/.bin/forever stop main.js"
+    "dev": "./node_modules/.bin/nodemon --config ./conf/nodemon.json"
   },
   "author": "Anna",
   "license": "ISC",
@@ -23,7 +22,6 @@
     "@types/express": "^4.16.0",
     "@types/nconf": "0.0.37",
     "@types/node": "^10.12.0",
-    "ts-node": "^7.0.1",
     "tslint": "^5.11.0",
     "typescript": "^3.1.3"
   }
