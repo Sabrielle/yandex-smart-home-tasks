@@ -7,6 +7,9 @@ npm run dev
 
 ## Для задания по типизации миграция на TypeScript api/events и /status
 
+Сборка:
+`npm run build`
+Запуск:
 `npm run type` 
 
 ## Задание 3 "Мультимедиа"
