@@ -7,10 +7,10 @@ npm run dev
 
 Для запуска видео необходимо сделать следующее:
 ```
-git clone https://github.com/mad-gooze/shri-2018-2-multimedia-homework.git
-cd shri-2018-2-multimedia-homework
-npm i
-npm start
+$ git clone https://github.com/mad-gooze/shri-2018-2-multimedia-homework.git
+$ cd shri-2018-2-multimedia-homework
+$ npm i
+$ npm start
 ```
 
 ## Задание 10 "Архитектура"
@@ -19,7 +19,7 @@ npm start
 
 Обновление состояний происходит через экземпляр `Store`. 
 
-```
+```js
 const appStore = new Store();
 appStore.watch('update', this._render); //подписка на определённое событие
 appStore.emit('update'); //генерация события
@@ -28,9 +28,9 @@ appStore.remove('update', this._render); //удаление подписки
 
 Диспетчер
 
-```
+```js
 const appDispatcher = new Dispatcher(); 
-appDispatcher.register(function(payload) { // регистрируем
+appDispatcher.register(function(payload) { // регистрируем события и обработчики
     const action = payload.action;
     switch(action.actionType) {
         case 'foo':
@@ -38,10 +38,10 @@ appDispatcher.register(function(payload) { // регистрируем
             break;
     }
 });
-appDispatcher.handleViewAction({actionType: 'foo', foo: foo}) // распределение события с вьюхи
+appDispatcher.handleViewAction({actionType: 'foo', foo: foo}) // реакция диспетчера на события с вьюхи
 ```
 
-Интерактивность была реализована для вкладок "События" и "Видеонаблюдение". Переключение осуществляется при помощи фреймоврка, при переключении с сервера запрашивается необходимая часть страницы. Умеет запоминать выбор страницы с помощью localStorage.
+Интерактивность была реализована для вкладок "События" и "Видеонаблюдение". Переключение осуществляется при помощи фреймворка, при переключении с сервера запрашивается необходимая часть страницы. Умеет запоминать выбор страницы с помощью localStorage.
 
 ## Задание 3 "Мультимедиа"
 
