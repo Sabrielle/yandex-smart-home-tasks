@@ -5,12 +5,43 @@ npm run dev
 ```
 Доступен по адресу  [localhost:8000](localhost:8000)
 
-## Для задания по типизации миграция на TypeScript api/events и /status
+Для запуска видео необходимо сделать следующее:
+```
+git clone https://github.com/mad-gooze/shri-2018-2-multimedia-homework.git
+cd shri-2018-2-multimedia-homework
+npm i
+npm start
+```
 
-Сборка:
-`npm run build`
-Запуск:
-`npm run type` 
+## Задание 10 "Архитектура"
+
+Файлы фреймворка находятся в `public\js\lib`
+
+Обновление состояний происходит через экземпляр `Store`. 
+
+```
+const appStore = new Store();
+appStore.watch('update', this._render); //подписка на определённое событие
+appStore.emit('update'); //генерация события
+appStore.remove('update', this._render); //удаление подписки
+```
+
+Диспетчер
+
+```
+const appDispatcher = new Dispatcher(); 
+appDispatcher.register(function(payload) { // регистрируем
+    const action = payload.action;
+    switch(action.actionType) {
+        case 'foo':
+            // ... 
+            break;
+    }
+});
+appDispatcher.handleViewAction({actionType: 'foo', foo: foo}) // распределение события с вьюхи
+```
+
+Интерактивность была реализована для вкладок "События" и "Видеонаблюдение". Переключение осуществляется при помощи фреймоврка, при переключении с сервера запрашивается необходимая часть страницы. Умеет запоминать выбор страницы с помощью localStorage.
 
 ## Задание 3 "Мультимедиа"
 
@@ -38,3 +69,10 @@ npm run dev
 - [http://localhost:8000/api/events?type=info&page=1&limit=bbb](http://localhost:8000/api/events?type=info&page=1&limit=bbb) - 400 incorrect number of page or limit
 - [http://localhost:8000/api/events?type=info:critical&page=3&limit=5](http://localhost:8000/api/events?type=info:critical&page=3&limit=5)
 - [http://localhost:8000/api/events?type=critical&page=3&limit=5](http://localhost:8000/api/events?type=critical&page=3&limit=5)- 400 page number is too big
+
+## Задание 7 "TypeScript" - миграция api/events и /status
+
+Сборка:
+`npm run build`
+Запуск:
+`npm run type` 

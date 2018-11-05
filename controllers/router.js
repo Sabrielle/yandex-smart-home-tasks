@@ -2,6 +2,7 @@
 
 var fs = require("fs");
 var api = require('./apiController');
+var pug = require('pug');
 
 module.exports = function (app) {
 
@@ -9,8 +10,18 @@ module.exports = function (app) {
         res.render('mainPage');
     });
 
-     app.get('/broadcast', (req, res) => {
+    app.get('/broadcast', (req, res) => {
         res.render('video');
+    });
+
+    app.get('/main', (req, res) => {
+        var cmp = pug.renderFile('./views/main.pug');
+        res.send(cmp);
+    });
+
+    app.get('/video', (req, res) => {
+        var cmp = pug.renderFile('./views/video-part.pug');
+        res.send(cmp);
     });
 
     app.get('/status', api.getUptime);

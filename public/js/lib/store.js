@@ -13,17 +13,14 @@ export default class Store extends Event {
 
     emit(event) {
         this.trigger(event);
-        console.log('trigger ->', event)
     }
 
     watch(event, callback) {
         this.bind(event, callback);
-        console.log('bind ->', event)
     }
 
     remove(event, callback) {
         this.unbind(event, callback);
-        console.log('unbind ->', event)
     }
 
 };

@@ -1,0 +1,47 @@
+script(src="https://cdn.jsdelivr.net/npm/hls.js@latest")
+.content-header
+  h1 Видеотрансляции
+.content-grid
+  .grid-item.size-m
+    .close
+      img(src='/public/img/cross.svg')
+    .grid-item-header
+      h4.grid-item-title Камера 1
+    .grid-item-content#item-1
+      video.video#video-1(controls,muted,autoplay)
+  .grid-item.size-m
+    .close
+      img(src='/public/img/cross.svg')
+    .grid-item-header
+      h4.grid-item-title Камера 2
+    .grid-item-content#item-2
+      video.video#video-2(controls,muted,autoplay)
+  .grid-item.size-m
+    .close
+      img(src='/public/img/cross.svg')
+    .grid-item-header
+      h4.grid-item-title Камера 3
+    .grid-item-content#item-3
+      video.video#video-3(controls,muted,autoplay)
+  .grid-item.size-m
+    .close
+      img(src='/public/img/cross.svg')
+    .grid-item-header
+      h4.grid-item-title Камера 4
+    .grid-item-content#item-4
+      video.video#video-4(controls,muted,autoplay)
+  
+#myModal.modal
+  .modal-body
+    .modal-header
+      .video-controls
+        div
+          label(for="brightness") Яркость
+          input#brightness(type="range",name="brightness",min="0", max="2",step="0.1")
+        div
+          label(for="contrast") Контрастность
+          input#contrast(type="range",name="contrast",min="0", max="2",step="0.1")
+      button.close-modal.btn.btn-default Все камеры
+    div#modal-video.modal-content
+      canvas#canvas(width="30",height="130")
+script(src='/public/js/video.js')  
