@@ -396,7 +396,7 @@ h1 {
 }
 
 .volume {
-  background: rgba(216,216,216,0.30)7
+  background: rgba(216,216,216,0.30);
   border-radius: 2px;
   height: 4px;
   width: 60%;
@@ -666,7 +666,6 @@ label {
 }
 
 #image {
-    width: 100vw;
     touch-action: none;
   }
 

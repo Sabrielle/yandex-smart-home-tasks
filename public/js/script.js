@@ -129,11 +129,13 @@ function init() {
 		return Math.atan2(y, x) * 180 / Math.PI;
 	}
 
-	d = document.getElementById('image')
-	d.addEventListener('pointerdown', pointerDownHandler);
-	d.addEventListener('pointerup', pointerUpHandler);
-	d.addEventListener('pointermove', pointerMoveHandler);
-	d.addEventListener('pointercancel', pointerUpHandler);
+	if(document.getElementById('image')) {
+		const d = document.getElementById('image');
+		d.addEventListener('pointerdown', pointerDownHandler);
+		d.addEventListener('pointerup', pointerUpHandler);
+		d.addEventListener('pointermove', pointerMoveHandler);
+		d.addEventListener('pointercancel', pointerUpHandler);
+	}
 
 }
 

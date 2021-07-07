@@ -1,0 +1,170 @@
+.content-header
+  h1 Лента событий
+.content-grid
+  .grid-item.size-l
+    .close
+      img(src='/public/img/cross.svg')
+    .grid-item-header
+      img.grid-item-icon(src='/public/img/stats.svg')
+      h4.grid-item-title Еженедельный отчет по расходам ресурсов
+    .grid-item-subheader
+      p Сенсоры потребления
+      p 19:00, Сегодня
+    .grid-item-content
+      p
+        | Так держать! За последнюю неделю вы потратили на 10% меньше ресурсов, чем неделей ранее.
+      img.img-fluid(src='/public/img/Richdata.svg')
+    .details
+      img(src='/public/img/Next.svg')
+  .grid-item.size-s
+    .close
+      img(src='/public/img/cross.svg')
+    .grid-item-header
+      img.grid-item-icon(src='/public/img/key.svg')
+      h4.grid-item-title Дверь открыта
+    .grid-item-subheader
+      p Сенсор входной двери
+      p 18:50, Сегодня
+    .details
+      img(src='/public/img/Next.svg')
+  .grid-item.size-s
+    .close
+      img(src='/public/img/cross.svg')
+    .grid-item-header
+      img.grid-item-icon(src='/public/img/robot-cleaner.svg')
+      h4.grid-item-title Уборка закончена
+    .grid-item-subheader
+      p Пылесос
+      p 18:45, Сегодня
+    .details
+      img(src='/public/img/Next.svg')
+  .grid-item.size-s
+    .close
+      img(src='/public/img/cross.svg')
+    .grid-item-header
+      img.grid-item-icon(src='/public/img/router.svg')
+      h4.grid-item-title Новый пользователь
+    .grid-item-subheader
+      p Роутер
+      p 18:45, Сегодня
+    .details
+      img(src='/public/img/Next.svg')
+  .grid-item.size-m
+    .close
+      img(src='/public/img/cross.svg')
+    .grid-item-header
+      img.grid-item-icon(src='/public/img/thermal.svg')
+      h4.grid-item-title Изменен климатический режим
+    .grid-item-subheader
+      p Сенсор микроклимата
+      p 18:30, Сегодня
+    .grid-item-content
+      p Установлен климатический режим «Фиджи»
+      .grid-item-additional.temperature
+        p
+          | Температура: 
+          b +24 С
+        p
+          | Влажность: 
+          b 80%
+    .details
+      img(src='/public/img/Next.svg')
+  .grid-item.size-m.item-critical
+    .close
+      img(src='/public/img/cross-white.svg')
+    .grid-item-header
+      img.grid-item-icon(src='/public/img/ac-white.svg')
+      h4.grid-item-title Невозможно включить кондиционер
+    .grid-item-subheader
+      p Кондиционер
+      p 18:22, Сегодня
+    .grid-item-content
+      p В комнате открыто окно, закройте его и повторите попытку
+    .details
+      img(src='/public/img/Next.svg')
+  .grid-item.size-m
+    .close
+      img(src='/public/img/cross.svg')
+    .grid-item-header
+      img.grid-item-icon(src='/public/img/music.svg')
+      h4.grid-item-title Музыка включена
+    .grid-item-subheader
+      p Яндекс.Станция
+      p 18:16, Сегодня
+    .grid-item-content
+      p Сейчас проигрывается:
+      .grid-item-additional
+        img(src='/public/img/album-cover.png')
+        .track-info
+          p.track-title Florence & The Machine - Big God
+          input.track(type='range', min='0', max='270', value='40')
+          span.track-duration 4:31
+      .grid-item-additional.music
+        img(src='/public/img/Prev.svg')
+        img(src='/public/img/Prev.svg')
+        input.volume(type='range', min='0', max='100', value='80')
+        p.track-volume 80%
+    .details
+      img(src='/public/img/Next.svg')
+  .grid-item.size-m
+    .close
+      img(src='/public/img/cross.svg')
+    .grid-item-header
+      img.grid-item-icon(src='/public/img/fridge.svg')
+      h4.grid-item-title Заканчивается молоко
+    .grid-item-subheader
+      p Холодильник
+      p 17:23, Сегодня
+    .grid-item-content
+      p
+        | Кажется, в холодильнике заканчивается молоко. Вы хотите добавить его в список покупок?
+      .grid-item-additional.buttons
+        button.btn.btn-default.btn-large.active Да
+        button.btn.btn-default.btn-large Нет
+    .details
+      img(src='/public/img/Next.svg')
+  .grid-item.size-s
+    .close
+      img(src='/public/img/cross.svg')
+    .grid-item-header
+      img.grid-item-icon(src='/public/img/battery.svg')
+      h4.grid-item-title Зарядка завершена
+    .grid-item-subheader
+      p Оконный сенсор
+      p 16:22, Сегодня
+    .grid-item-content
+      p Ура! Устройство «Оконный сенсор» снова в строю!
+    .details
+      img(src='/public/img/Next.svg')
+  .grid-item.size-l.item-critical
+    .item-header
+      .close
+        img(src='/public/img/cross-white.svg')
+      .grid-item-header
+        img.grid-item-icon(src='/public/img/cam-white.svg')
+        h4.grid-item-title Пылесос застрял
+      .grid-item-subheader
+        p Сенсор движения
+        p 16:17, Сегодня
+    .item-content
+      .grid-item-content
+        p
+          | Робопылесос не смог сменить свое местоположение в течение последних 3 минут. Похоже, ему нужна помощь.
+        .accessible
+          img#image.img-fluid(touch-action='none', draggable='false', src='/public/img/Richdata Graph Alternative.png')
+        .grid-item-additional.controls
+          p#zoom Приближение: 100%
+          p#brightness Яркость: 100%
+      .details
+        img(src='/public/img/Next.svg')
+  .grid-item.size-s
+    .close
+      img(src='/public/img/cross.svg')
+    .grid-item-header
+      img.grid-item-icon(src='/public/img/kettle.svg')
+      h4.grid-item-title Вода вскипела
+    .grid-item-subheader
+      p Чайник
+      p 16:20, Сегодня
+    .details
+      img(src='/public/img/Next.svg') 

@@ -6,6 +6,8 @@ html
     meta(name='robots', content='noindex')
     link(href='/public/css/style.css', rel='stylesheet')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    script(src="https://cdn.jsdelivr.net/npm/hls.js@latest")
+    script(type="module",src='/public/js/index.js')
     block header
   body.main-panel
     header.navbar.navbar-expand.navbar-absolute.fixed-top
@@ -15,13 +17,15 @@ html
         nav.collapse.navbar-collapse
           ul.navbar-nav
             li.nav-item
+              a.nav-link#main(href='/') Cобытия
+            li.nav-item
+              a.nav-link#video(href='broadcast') Видеотрансляция
+            li.nav-item
               a.nav-link(href='#') Сводка
             li.nav-item
               a.nav-link(href='#') Устройства
             li.nav-item
               a.nav-link(href='#') Сценарии
-            li.nav-item
-              a.nav-link(href='broadcast') Видеотрансляция
         .navbar-toggler.navbar-toggler-icon
   hr
   main.content.container
@@ -40,3 +44,4 @@ html
           a(href='files/license.pdf') Авторские права
       p.copy © 2001 - 2018 ООО "Яндекс"
   block scripts
+  script(src='/public/js/video.js')  
